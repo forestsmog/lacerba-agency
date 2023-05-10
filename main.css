@@ -1,73 +1,144 @@
-/************************** GENERAL ********************/
+/************ GENERAL ************/
+
+*{
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
 
 body {
-    font-family: Corbel, Arial, sans-serif;
-    margin: 0;
+	font-family: 'Tillana', cursive;
+	font-size: 1.4rem;
 }
 
-h1 {
-    color: #000000;
-    font-size: 36px;
+li {
+	font-size: 20px;
 }
-
-h2 {
-    color: #000000;
-}
-
-
-
-
 
 a {
-    color: #000000;
-    text-decoration:none ;
+	text-decoration: none;
+	font-size: 1.5rem;
 }
 
-/************************** HEADER ********************/
-
-#header {
- background-color:#000000;
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 0 15px;
 }
 
-h1{
-    font-size: 36px;
-    margin: 0;
-    text-align: center;
-    padding: 15px 0 0 0;
-    color: #ffffff;
-    text-transform: uppercase;
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
- h2 {
-    text-align: center;
-    margin: 0;
-    color: #ffffff;
+/************ HEADER ***********/
+
+header {
+	background: seagreen;
+	text-align: center;
+	
 }
 
-#nav {
-    background-color: #000000;
-    text-align: center;
-    list-style-type: none;
+header .logo-container {
+	padding: 20px;
 }
 
-#nav li{
-    display: inline-block;
-    padding: 6px 8px 6px 8px;
+header img {
+	width: 140px;
 }
 
-#nav li a {
-     color: #ffffff;
+
+/************ NAVIGATION ***********/
+
+nav {
+	background: darkgreen;
+	padding: 10px;
 }
 
-#nav li: hover {
-    background-color: #000000;
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
-/************************* CONTENT *********************/
 
-#content {
-    width: 600px;
-    margin: 30px auto;
+nav li {
+	display: inline-block;
 }
-#content h4 {
-    border-bottom:  #599a68 solid 3px;
+
+nav li a {
+	color: #fff;
+	display: inline-block;
+	padding: 5px 10px;
+	text-transform: uppercase;
 }
+
+/************ GALLERY ************/
+
+#gallery {
+	padding-top:  0px;
+	padding-bottom: 0px;
+}
+
+#gallery img {
+	width: 200px;
+}
+
+#gallery .item {
+	float: none;
+	width: 33.3333%;
+	padding: 10px;
+}
+
+#gallery .item:last-child{
+	clear: left;
+}
+
+#gallery .caption {
+	background: lightcyan;
+	padding: 50px;
+
+
+}
+#gallery .caption p {
+	margin: 0;
+}
+
+/******** FOOTER ********/
+
+footer.main {
+}
+
+
+
+
+
+@media only screen and (min-width:768px) {
+	
+
+	/************ GALLERY ************/
+
+	#gallery .item {
+		width: 50%;
+	}
+
+  #gallery .item:nth-child(3n + 1) {
+	clear: left;
+}
+
+
+@media only screen and (min-width:992px) {
+	
+		
+	}
+
+@media only screen and (max-width:767px) {
+	
+
+	/************ GALLERY ************/
+
+ 	#gallery .item:nth-child(3n + 1) {
+	clear: left;
+
